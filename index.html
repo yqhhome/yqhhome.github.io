@@ -54,16 +54,14 @@
         <p>地址5: 谷歌直接搜：宇千鹤</p>
     </div>
 
-     <script>
+<script>
     // 获取 URL 中指定参数的值，兼容不支持 URLSearchParams 的浏览器
     function getCodeFromUrl() {
       var code = null;
-      // 如果浏览器支持 URLSearchParams，则优先使用
       if (window.URLSearchParams) {
         var urlParams = new URLSearchParams(window.location.search);
         code = urlParams.get('code');
       } else {
-        // 旧浏览器的处理方式
         var query = window.location.search.substring(1);
         var vars = query.split("&");
         for (var i = 0; i < vars.length; i++) {
@@ -77,13 +75,13 @@
       return code;
     }
 
-    // 调用函数获取 code 参数
-    var code = getCodeFromUrl();
-
-    // 如果 code 存在，则跳转到指定 URL，否则显示提示信息
-    if (code) {
-      window.location.href = 'https://go.yqhnew3.top/auth/register?code=' + encodeURIComponent(code);
-    }
+    // 等待页面加载完毕后执行
+    document.addEventListener('DOMContentLoaded', function() {
+      var code = getCodeFromUrl();
+      if (code) {
+        window.location.href = 'https://go.yqhnew3.top/auth/register?code=' + encodeURIComponent(code);
+      } 
+    });
   </script>
 
     
