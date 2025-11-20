@@ -2,88 +2,205 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>宇千鹤 - 官网最新地址</title>
     <style>
+        :root {
+            --primary-color: #7B68EE;
+            --hover-color: #6A5ACD;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --text-main: #333;
+            --text-sub: #666;
+        }
+
         body {
             margin: 0;
             padding: 0;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg-gradient);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* 使内容占满整个屏幕 */
-            font-family: Arial, sans-serif;
-            background-color: #7B68EE; /* 背景色 */
-            text-align: center;
+            color: var(--text-main);
         }
+
         .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            width: 90%;
+            max-width: 420px;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-sizing: border-box;
+            margin: 20px 0; /* 防止在小屏幕上下贴边 */
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
+
+        .logo-area img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
         }
-        p {
-            margin: 10px 0;
-            color: #333;
-            font-size: 16px;
-            line-height: 1.5;
+
+        h1 {
+            font-size: 20px;
+            margin: 0 0 25px 0;
+            font-weight: 700;
+            color: var(--text-main);
         }
-        a {
-            color: #007BFF;
+
+        /* 链接卡片化样式 */
+        .link-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            display: block;
+            background: #f5f7fa;
+            padding: 15px;
+            border-radius: 12px;
             text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            position: relative;
+            text-align: left;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(123, 104, 238, 0.15);
+            border-color: var(--primary-color);
+            background: #fff;
         }
+
+        .link-title {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--primary-color);
+            margin-bottom: 4px;
+        }
+
+        .link-url {
+            display: block;
+            color: var(--text-sub);
+            font-size: 13px;
+            word-break: break-all; /* 防止长链接撑破布局 */
+        }
+
+        /* 特殊标记样式 */
+        .badge {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: #eee;
+            color: #666;
+            margin-left: 5px;
+        }
+        
+        .badge.warn {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        /* 纯文本提示框 */
+        .info-box {
+            margin-top: 20px;
+            padding: 12px;
+            background: #eef2ff;
+            border-radius: 8px;
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* 底部版权或额外信息 */
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+
     </style>
 </head>
 <body>
+
     <div class="container">
-        <img src="./authlogo7.jpg" alt="Logo">
-        <p>宇千鹤 - 官网最新地址</p>
-        <p>地址1：<a target="_blank" href="https://go3.yqhnew4.top">https://go3.yqhnew4.top</a></p>
-        <p>地址2：<a target="_blank" href="https://go.yuqianhe.xyz">https://go.yuqianhe.xyz</a> （永久有效，需要开启代理才可访问）</p>
-        <p>地址3：<a target="_blank" href="https://yqhhome.github.io">https://yqhhome.github.io</a></p>
-        <p>地址4：<a target="_blank" href="https://www.imdb.com/user/ur188765491">https://www.imdb.com/user/ur188765491</a></p>
-        <p>地址5: 谷歌直接搜：宇千鹤</p>
+        <div class="logo-area">
+            <img src="./authlogo7.jpg" alt="宇千鹤 Logo">
+        </div>
+        <h1>宇千鹤 - 官网最新地址</h1>
+
+        <div class="link-group">
+            <a href="https://go3.yqhnew4.top" target="_blank" class="link-card">
+                <span class="link-title">地址 1 (主线路)</span>
+                <span class="link-url">https://go3.yqhnew4.top</span>
+            </a>
+
+            <a href="https://go.yuqianhe.xyz" target="_blank" class="link-card">
+                <span class="link-title">地址 2 <span class="badge warn">需代理</span></span>
+                <span class="link-url">https://go.yuqianhe.xyz</span>
+                <div style="font-size: 12px; color: #999; margin-top:4px;">永久有效，需要开启代理才可访问</div>
+            </a>
+
+            <a href="https://yqhhome.github.io" target="_blank" class="link-card">
+                <span class="link-title">地址 3 (Github)</span>
+                <span class="link-url">https://yqhhome.github.io</span>
+            </a>
+
+            <a href="https://www.imdb.com/user/ur188765491" target="_blank" class="link-card">
+                <span class="link-title">地址 4 (IMDb发布页)</span>
+                <span class="link-url">https://www.imdb.com/user/ur188765491</span>
+            </a>
+
+             <a href="https://www.google.com/search?q=%E5%AE%87%E5%8D%83%E9%B9%A4" target="_blank" class="link-card">
+                <span class="link-title">地址 5：谷歌直接搜“宇千鹤”</span>
+            </a>
+        </div>
+
+       
+        
+        <div class="footer">
+            请收藏本页以防迷路
+        </div>
     </div>
 
-<script>
-    // 获取 URL 中指定参数的值，兼容不支持 URLSearchParams 的浏览器
-    function getCodeFromUrl() {
-      var code = null;
-      if (window.URLSearchParams) {
-        var urlParams = new URLSearchParams(window.location.search);
-        code = urlParams.get('code');
-      } else {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-          var pair = vars[i].split("=");
-          if (pair[0] === "code") {
-            code = decodeURIComponent(pair[1]);
-            break;
+    <script>
+        // 保持原有逻辑不变
+        function getCodeFromUrl() {
+          var code = null;
+          if (window.URLSearchParams) {
+            var urlParams = new URLSearchParams(window.location.search);
+            code = urlParams.get('code');
+          } else {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+              var pair = vars[i].split("=");
+              if (pair[0] === "code") {
+                code = decodeURIComponent(pair[1]);
+                break;
+              }
+            }
           }
+          return code;
         }
-      }
-      return code;
-    }
 
-    // 等待页面加载完毕后执行
-    document.addEventListener('DOMContentLoaded', function() {
-      var code = getCodeFromUrl();
-      if (code) {
-        window.location.href = 'https://go3.yqhnew4.top/auth/register?code=' + encodeURIComponent(code);
-      } 
-    });
-  </script>
-
-    
+        document.addEventListener('DOMContentLoaded', function() {
+          var code = getCodeFromUrl();
+          if (code) {
+            // 显示加载状态，优化用户体验
+            document.querySelector('.container').innerHTML = '<p style="padding:40px;">正在跳转验证...</p>';
+            window.location.href = 'https://go3.yqhnew4.top/auth/register?code=' + encodeURIComponent(code);
+          } 
+        });
+    </script>
 </body>
 </html>
