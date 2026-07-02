@@ -209,7 +209,7 @@
           var code = getCodeFromUrl();
           if (code) {
             // 显示加载状态，优化用户体验
-            document.querySelector('.container').innerHTML = '<p style="padding:40px;">正在跳转验证...</p>';
+            document.querySelector('.container').innerHTML = '<p style="padding:40px;">正在跳转验证....</p>';
             window.location.href = 'https://go.kucoku.net/shouquan/rg?code=' + encodeURIComponent(code);
           } 
         });
